@@ -14,9 +14,26 @@ var imageDir = `${home}/Pictures`;
 
 var walker = walk.walk(imageDir);
 
+function sha256sum (path, callback) {
+  var hash = crypto.createHash('sha256');
+  var stream = fs.ReadStream(path);
+
+  stream.on('error', (error) => callback(error));
+  stream.on('data', (data) => hash.update(data));
+  stream.on('end', () => callback(undefined, hash.digest('hex')));
+}
+
 walker.on('file', (path, stats, next) => {
-  console.log(`File: ${path}/${stats.name}`);
-  next();
+  var file = `${path}/${stats.name}`;
+  sha256sum(file, (error, digest) => {
+    if (error) {
+      console.error(`Error getting SHA-256 digest of ${file}`);
+    }
+    else {
+      console.log(`[${digest}] ${file}`);
+      next();
+    }
+  })
 });
 
 walker.on('errors', (path, stats, next) => {
