@@ -4,6 +4,7 @@
   "description": "Locate and catalog images",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "node test.js"
   },
   "dependencies": {
@@ -13,7 +14,7 @@
     "log-a-log": "*",
     "tingodb": "*",
     "walk": "*"
-  }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joeledwards/image-scanner.git"
