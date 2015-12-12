@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "async": "*",
+    "durations": "*",
     "exif": "*",
     "lodash": "*",
     "log-a-log": "*",
