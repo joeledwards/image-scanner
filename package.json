@@ -6,6 +6,14 @@
   "scripts": {
     "test": "node test.js"
   },
+  "dependencies": {
+    "async": "*",
+    "exif": "*",
+    "lodash": "*",
+    "log-a-log": "*",
+    "tingodb": "*",
+    "walk": "*"
+  }
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joeledwards/image-scanner.git"
