@@ -1,0 +1,19 @@
+{
+  "name": "image-scanner",
+  "version": "1.0.0",
+  "description": "Locate and catalog images",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeledwards/image-scanner.git"
+  },
+  "author": "Joel Edwards",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joeledwards/image-scanner/issues"
+  },
+  "homepage": "https://github.com/joeledwards/image-scanner#readme"
+}
