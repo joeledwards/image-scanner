@@ -4,6 +4,7 @@
   "description": "Locate and catalog images",
   "main": "index.js",
   "scripts": {
+    "exif": "node exif.js",
     "start": "node index.js",
     "test": "node test.js"
   },
